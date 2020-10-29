@@ -30,6 +30,7 @@
     "memory-cache": "^0.2.0",
     "mockingoose": "^2.13.2",
     "mongoose": "^5.10.11",
+    "mongoose-autopopulate": "^0.12.2",
     "swagger-ui-express": "^4.1.4"
   },
   "devDependencies": {
