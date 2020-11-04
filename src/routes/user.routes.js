@@ -1,11 +1,19 @@
 const { Router } = require('express')
-const { AuthMiddleware, ParseIntMiddleware } = require('../middlewares')
-const parseIntMiddleware = require('../middlewares/parse-int.middleware')
+const {
+  AuthMiddleware,
+  ParseIntMiddleware,
+  CacheMiddleware,
+} = require('../middlewares')
+const { CACHE_TIME } = require('../helpers')
 
 module.exports = function ({ UserController }) {
   const router = Router()
 
-  router.get('', [AuthMiddleware, parseIntMiddleware], UserController.getAll)
+  router.get(
+    '',
+    [AuthMiddleware, ParseIntMiddleware, CacheMiddleware(CACHE_TIME.ONE_HOUR)],
+    UserController.getAll
+  )
   router.get('/:userId', UserController.get)
   router.patch('/:userId', UserController.update)
   router.delete('/:userId', UserController.delete)
