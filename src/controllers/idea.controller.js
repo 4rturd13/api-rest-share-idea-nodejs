@@ -18,15 +18,15 @@ class IdeaController {
 
   async create(req, res) {
     const { body } = req
-    const createIdea = await _ideaService.create(body)
-    return res.status(201).send(createIdea)
+    const createdIdea = await _ideaService.create(body)
+    return res.status(201).send(createdIdea)
   }
 
   async update(req, res) {
     const { body } = req
     const { ideaId } = req.params
-    const updateIdea = await _ideaService.update(ideaId, body)
-    return res.send(updateIdea)
+    const updatedIdea = await _ideaService.update(ideaId, body)
+    return res.send(updatedIdea)
   }
 
   async delete(req, res) {
@@ -44,6 +44,12 @@ class IdeaController {
   async upvoteIdea(req, res) {
     const { ideaId } = req.params
     const idea = await _ideaService.upvoteIdea(ideaId)
+    return res.send(idea)
+  }
+
+  async downvoteIdea(req, res) {
+    const { ideaId } = req.params
+    const idea = await _ideaService.downvoteIdea(ideaId)
     return res.send(idea)
   }
 }

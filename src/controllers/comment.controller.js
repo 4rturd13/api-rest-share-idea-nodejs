@@ -24,16 +24,16 @@ class CommentController {
     return res.send(deleteComment)
   }
 
-  async getIdeasComments(req, res) {
+  async getIdeaComments(req, res) {
     const { ideaId } = req.params
-    const comments = await _commentService.getIdeasComments(ideaId)
+    const comments = await _commentService.getIdeaComments(ideaId)
     return res.send(comments)
   }
 
   async createComment(req, res) {
     const { body } = req
-    const { ideasId } = req.params
-    const createComment = await _commentService.createComment(body, ideasId)
+    const { ideaId } = req.params
+    const createComment = await _commentService.createComment(body, ideaId)
     return res.status(201).send(createComment)
   }
 }
