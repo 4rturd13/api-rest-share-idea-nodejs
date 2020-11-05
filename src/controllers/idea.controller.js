@@ -1,5 +1,4 @@
 let _ideaService = null
-
 class IdeaController {
   constructor({ IdeaService }) {
     _ideaService = IdeaService
@@ -32,8 +31,8 @@ class IdeaController {
 
   async delete(req, res) {
     const { ideaId } = req.params
-    const deleteIdea = await _ideaService.delete(ideaId)
-    return res.send(deleteIdea)
+    const deletedIdea = await _ideaService.delete(ideaId)
+    return res.send(deletedIdea)
   }
 
   async getUserIdeas(req, res) {

@@ -5,7 +5,7 @@ const IdeaSchema = new Schema({
   idea: { type: String, required: true },
   description: { type: String },
   upvotes: [{ type: Boolean }],
-  dowvotes: [{ type: Boolean }],
+  downvotes: [{ type: Boolean }],
   author: {
     type: Schema.Types.ObjectId,
     ref: 'user',

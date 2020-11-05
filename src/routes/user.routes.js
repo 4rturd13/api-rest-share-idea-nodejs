@@ -2,7 +2,7 @@ const { Router } = require('express')
 const {
   AuthMiddleware,
   ParseIntMiddleware,
-  CacheMiddleware,
+  /* CacheMiddleware, */
 } = require('../middlewares')
 const { CACHE_TIME } = require('../helpers')
 
@@ -11,7 +11,7 @@ module.exports = function ({ UserController }) {
 
   router.get(
     '',
-    [ParseIntMiddleware, CacheMiddleware(CACHE_TIME.ONE_HOUR)],
+    [ParseIntMiddleware /* CacheMiddleware(CACHE_TIME.ONE_HOUR) */],
     UserController.getAll
   )
   router.get('/:userId', UserController.get)

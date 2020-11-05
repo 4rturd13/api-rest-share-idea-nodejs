@@ -42,7 +42,7 @@ class BaseService {
     return await this.repository.update(id, entity)
   }
 
-  async delete() {
+  async delete(id) {
     if (!id) {
       const error = new Error()
       error.status = 400

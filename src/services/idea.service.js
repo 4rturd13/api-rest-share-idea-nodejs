@@ -18,7 +18,7 @@ class IdeaService extends BaseService {
     return await _ideaRepository.getUserIdeas(author)
   }
 
-  async upvotesIdea(ideaId) {
+  async upvoteIdea(ideaId) {
     if (!ideaId) {
       const error = new Error()
       error.status = 400
@@ -27,10 +27,11 @@ class IdeaService extends BaseService {
     }
 
     const idea = await _ideaRepository.get(ideaId)
+
     if (!idea) {
       const error = new Error()
       error.status = 404
-      error.message = 'idea doest not exist'
+      error.message = 'idea does not exist'
       throw error
     }
 
@@ -39,7 +40,7 @@ class IdeaService extends BaseService {
     return await _ideaRepository.update(ideaId, { upvotes: idea.upvotes })
   }
 
-  async downvotesIdea(ideaId) {
+  async downvoteIdea(ideaId) {
     if (!ideaId) {
       const error = new Error()
       error.status = 400
@@ -48,16 +49,17 @@ class IdeaService extends BaseService {
     }
 
     const idea = await _ideaRepository.get(ideaId)
+
     if (!idea) {
       const error = new Error()
       error.status = 404
-      error.message = 'idea doest not exist'
+      error.message = 'idea does not exist'
       throw error
     }
 
     idea.downvotes.push(true)
 
-    return await _ideaRepository.update(ideaId, { upvotes: idea.downvotes })
+    return await _ideaRepository.update(ideaId, { downvotes: idea.downvotes })
   }
 }
 

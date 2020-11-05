@@ -24,7 +24,7 @@ module.exports = function ({
   apiRoutes.use('/home', HomeRoutes)
   apiRoutes.use('/user', UserRoutes)
   apiRoutes.use('/idea', IdeaRoutes)
-  apiRoutes.use('/commnet', CommentRoutes)
+  apiRoutes.use('/comment', CommentRoutes)
   apiRoutes.use('/auth', AuthRoutes)
 
   router.use('/v1/api', apiRoutes)
