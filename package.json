@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/4rturd13/rd-api.git"
+    "url": "git+https://github.com/4rturd13/api-rest-share-idea-nodejs.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/4rturd13/rd-api/issues"
+    "url": "https://github.com/4rturd13/api-rest-share-idea-nodejs/issues"
   },
-  "homepage": "https://github.com/4rturd13/rd-api#readme",
+  "homepage": "https://github.com/4rturd13/api-rest-share-idea-nodejs#readme",
   "dependencies": {
     "awilix": "^4.2.7",
     "bcryptjs": "^2.4.3",
