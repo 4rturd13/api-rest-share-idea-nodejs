@@ -1,5 +1,7 @@
 # Share your idea
 
+[![Build Status](https://travis-ci.org/4rturd13/api-rest-share-idea-nodejs.svg?branch=master)](https://travis-ci.org/github/4rturd13/api-rest-share-idea-nodejs)
+
 ### Description
 
 In this project you can sign in and publish your idea for other people can vote for or vote against.
