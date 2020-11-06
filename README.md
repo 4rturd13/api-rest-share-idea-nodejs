@@ -1,4 +1,4 @@
-# [Share your idea]
+# Share your idea
 
 ### Description
 
@@ -7,7 +7,7 @@ In this project you can sign in and publish your idea for other people can vote 
 ## Documentation
 
 You can see the documentation for endpoints in SWAGGER
-running this project and using path /api-docs
+running this project and using path `/api-docs`
 ex: http://localhost:5000/api-docs/
 
 or using postman documentation
@@ -16,10 +16,11 @@ or using postman documentation
 
 ## Run project
 
-Use NPM or YARN
+Use **NPM** to install `node_modules`
 
-npm install / yarn
+`npm install`
 
 ### Start
 
-npm run dev
+`npm run dev`
+`npm run start`
