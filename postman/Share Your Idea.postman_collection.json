@@ -1,0 +1,549 @@
+{
+	"info": {
+		"_postman_id": "a324fab8-b710-4358-a4ab-0d95e5d59e2f",
+		"name": "Share Your Idea",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "All user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "username",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "saitama",
+							"type": "text"
+						},
+						{
+							"key": "correo",
+							"value": "12345",
+							"type": "text"
+						}
+					],
+					"options": {
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/v1/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"flash\",\n\t\"password\": \"12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/v1/api/auth/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"api",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Barry Allen\",\n\t\"username\": \"flash\",\n\t\"password\": \"12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/v1/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create idea",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoib25lX3B1bmNoIiwiaWQiOiI1ZmEyZTNhMzM0YzY4NzA5MmI5MjNkMGUifSwiaWF0IjoxNjA0NTM5Nzg2LCJleHAiOjE2MDQ1NTQxODZ9.fi3WvgtwIyla5GdKhtMR-G98tJIUmRY2LQaI3eCKlL8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"idea\": \"Fundation name\",\n\t\"description\": \"Some description\",\n\t\"author\": \"5fa31b4e4a076f10e3cff336\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/v1/api/idea",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"api",
+						"idea"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All idea",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiZmxhc2giLCJpZCI6IjVmYTM1ZGM0ODdmMmNlMWMzYzJlZmY5OCJ9LCJpYXQiOjE2MDQ1NTU3MDksImV4cCI6MTYwNDU3MDEwOX0.5PvcNkp6ornknEBS3VZJN6NM_vsdk2MHOM28rLcrGMU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"commnet\": \"Learn Node.js\",\n    \"description\": \"Express Framework\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/v1/api/idea",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"api",
+						"idea"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "username",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "saitama",
+							"type": "text"
+						},
+						{
+							"key": "correo",
+							"value": "12345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/v1/api/user/5fa3563746e5d41b5f3a7b43",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"api",
+						"user",
+						"5fa3563746e5d41b5f3a7b43"
+					]
+				},
+				"description": "Get user by id"
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoib25lX3B1bmNoIiwiaWQiOiI1ZmEyZTNhMzM0YzY4NzA5MmI5MjNkMGUifSwiaWF0IjoxNjA0NTQxNzMyLCJleHAiOjE2MDQ1NTYxMzJ9.osJ3of9CorgzrsxTGkh4FlFpldIuIJ8tw7Jgaio3c8M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"The Flash\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/v1/api/user/5fa3563746e5d41b5f3a7b43",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"api",
+						"user",
+						"5fa3563746e5d41b5f3a7b43"
+					]
+				},
+				"description": "Update user by ID"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoib25lX3B1bmNoIiwiaWQiOiI1ZmEyZTNhMzM0YzY4NzA5MmI5MjNkMGUifSwiaWF0IjoxNjA0NTQxNzMyLCJleHAiOjE2MDQ1NTYxMzJ9.osJ3of9CorgzrsxTGkh4FlFpldIuIJ8tw7Jgaio3c8M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:5000/v1/api/user/5fa31b3c4a076f10e3cff335",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"api",
+						"user",
+						"5fa31b3c4a076f10e3cff335"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Up votes",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiZmxhc2giLCJpZCI6IjVmYTM1ZGM0ODdmMmNlMWMzYzJlZmY5OCJ9LCJpYXQiOjE2MDQ1NDMyNjIsImV4cCI6MTYwNDU1NzY2Mn0.QSf3MRrdFvF_qLDseFzg9dyQbhkUCDP38_kB81jx2xA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/v1/api/idea/5fa3572046e5d41b5f3a7b44/upvote",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"api",
+						"idea",
+						"5fa3572046e5d41b5f3a7b44",
+						"upvote"
+					]
+				},
+				"description": "vote positive"
+			},
+			"response": []
+		},
+		{
+			"name": "Down votes",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiZmxhc2giLCJpZCI6IjVmYTM1ZGM0ODdmMmNlMWMzYzJlZmY5OCJ9LCJpYXQiOjE2MDQ1NDMyNjIsImV4cCI6MTYwNDU1NzY2Mn0.QSf3MRrdFvF_qLDseFzg9dyQbhkUCDP38_kB81jx2xA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/v1/api/idea/5fa3572046e5d41b5f3a7b44/downvote",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"api",
+						"idea",
+						"5fa3572046e5d41b5f3a7b44",
+						"downvote"
+					]
+				},
+				"description": "Vote negative"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Idea",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoib25lX3B1bmNoIiwiaWQiOiI1ZmEyZTNhMzM0YzY4NzA5MmI5MjNkMGUifSwiaWF0IjoxNjA0NTM5Nzg2LCJleHAiOjE2MDQ1NTQxODZ9.fi3WvgtwIyla5GdKhtMR-G98tJIUmRY2LQaI3eCKlL8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"update idea\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/v1/api/idea/5fa31db0e05d2b11bc290be1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"api",
+						"idea",
+						"5fa31db0e05d2b11bc290be1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Idea",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoib25lX3B1bmNoIiwiaWQiOiI1ZmEyZTNhMzM0YzY4NzA5MmI5MjNkMGUifSwiaWF0IjoxNjA0NTM5Nzg2LCJleHAiOjE2MDQ1NTQxODZ9.fi3WvgtwIyla5GdKhtMR-G98tJIUmRY2LQaI3eCKlL8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"update idea\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/v1/api/idea/5fa3572046e5d41b5f3a7b44",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"api",
+						"idea",
+						"5fa3572046e5d41b5f3a7b44"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All idea by user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/v1/api/idea/5fa31b4e4a076f10e3cff336/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"api",
+						"idea",
+						"5fa31b4e4a076f10e3cff336",
+						"all"
+					]
+				},
+				"description": "Get all ideas by user"
+			},
+			"response": []
+		},
+		{
+			"name": "Create comment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiZmxhc2giLCJpZCI6IjVmYTM1ZGM0ODdmMmNlMWMzYzJlZmY5OCJ9LCJpYXQiOjE2MDQ1NTYwMjUsImV4cCI6MTYwNDU3MDQyNX0.I7NjcZYpkQ1yIsMJoX49AovbElOT2nSl6Jat7mlOrsE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"comment\": \"Learning Node.js\",\n    \"description\": \"Amazing platform\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/v1/api/comment/5fa31db0e05d2b11bc290be1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"api",
+						"comment",
+						"5fa31db0e05d2b11bc290be1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get comment by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiZmxhc2giLCJpZCI6IjVmYTM1ZGM0ODdmMmNlMWMzYzJlZmY5OCJ9LCJpYXQiOjE2MDQ1NTYwMjUsImV4cCI6MTYwNDU3MDQyNX0.I7NjcZYpkQ1yIsMJoX49AovbElOT2nSl6Jat7mlOrsE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"comment\": \"Learning Node.js\",\n    \"description\": \"Amazing platform\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/v1/api/comment/5fa31db0e05d2b11bc290be1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"v1",
+						"api",
+						"comment",
+						"5fa31db0e05d2b11bc290be1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
